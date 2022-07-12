@@ -11,4 +11,11 @@ RSpec.describe Deck do
   it 'has 52 cards' do
     expect(deck.cards.count).to eq(52)
   end
+
+  it 'can shuffle cards' do
+    cards = deck.cards
+    deck.shuffle
+    cards2 = deck.cards
+    expect(cards).not_to eq(cards2)
+  end
 end
