@@ -2,20 +2,17 @@ require 'spec_helper'
 require './lib/playing_card'
 
 RSpec.describe PlayingCard do
-    
-    before(:each) do
-        @card = PlayingCard.new('diamond', 'A')
-    end
+  let(:card) { described_class.new('diamond', 'A') }
 
-    it 'exists' do
-        expect(@card).to be_instance_of(PlayingCard)
-    end
+  it 'exists' do
+    expect(card).to be_instance_of(described_class)
+  end
 
-    it 'has a suit' do
-        expect(@card.suit).to eq('diamond')
-    end
+  it 'has a suit' do
+    expect(card.suit).to eq('diamond')
+  end
 
-    it 'has a value' do
-        expect(@card.value).to eq('A')
-    end
+  it 'has a value' do
+    expect(card.value).to eq('A')
+  end
 end
