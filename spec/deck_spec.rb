@@ -18,4 +18,9 @@ RSpec.describe Deck do
     cards2 = deck.cards
     expect(cards).not_to eq(cards2)
   end
+
+  it 'can deal cards' do
+    expect(deck.deal).to be_instance_of(PlayingCard)
+    expect(deck.cards.count).to eq(51)
+  end
 end

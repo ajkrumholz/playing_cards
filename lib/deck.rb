@@ -20,4 +20,8 @@ class Deck
   def shuffle
     @cards = @cards.shuffle
   end
+
+  def deal
+    @cards.shift
+  end
 end
