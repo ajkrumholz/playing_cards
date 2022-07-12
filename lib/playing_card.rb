@@ -6,3 +6,6 @@ class PlayingCard
     @value = value
   end
 end
+
+def test_method
+end
